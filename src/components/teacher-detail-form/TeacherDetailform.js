@@ -4,12 +4,12 @@ import firestore from "./../../firebase.js";
 import ClassList from "./ClassList.js";
 
 function ScheduleClass() {
-  const { items, setitems } = useState([]);
-  const { classValue, setclassvalue } = useState("");
+  //const { items, setitems } = useState([]);
+  const [classValue, setclassValue] = useState([]);
   const db = firestore.collection("teacherDetail");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     let teacherName = document.getElementById("teacher").value;
     let email = document.getElementById("email").value;
     let subject = document.getElementById("exampleFormControlSelect1").value;
@@ -22,23 +22,28 @@ function ScheduleClass() {
       })
       .then(function () {
         console.log("Data saved");
-        // console.log(state.classValue);
+        console.log(classValue);
       })
       .catch(function (error) {
         console.log(error);
       });
   };
 
-  const classEl = document.getElementById("class");
+  //const classEl = document.getElementById("class");
 
   const handleonChange = (event) => {
     event.preventDefault();
     let e = event.target;
     //let classValue = setclassvalue(e.value);
-    //console.log(e);
-    !e.ClassList.contains("oc-btn-color")
-      ? e.ClassList.add("oc-btn-color")
-      : e.ClassList.remove("oc-btn-color");
+    if (!e.classList.contains("oc-btn-color")) {
+      e.classList.add("oc-btn-color");
+      // let classval = e.value;
+      setclassValue([...classValue, e.value]);
+    } else {
+      e.classList.remove("oc-btn-color");
+      setclassValue(classValue.filter((item) => item != e.value));
+    }
+    console.log(classValue);
   };
 
   return (

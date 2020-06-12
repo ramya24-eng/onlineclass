@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
 import TeacherDetailform from "./../teacher-detail-form/TeacherDetailform.js";
+import ScheduleClass from "./../schedule-class/ScheduleClass";
 import "./Navbar.scss";
 
 function Navbar() {
@@ -44,7 +45,9 @@ function Navbar() {
       <Route exact path="/stafflist">
         <TeacherDetailform />
       </Route>
-      <Route path="/scheduleclass" />
+      <Route path="/scheduleclass">
+        <ScheduleClass />
+      </Route>
     </div>
   );
 }

@@ -21,17 +21,6 @@
   border: 1px solid white;
 }
 
-ul li {
-  display: inline;
-  padding: 5px;
-  padding-bottom: 5px;
-}
-
-ul li button {
-  //border: 1px solid blue($color: #000000);
-  background-color: blue($color: #000000);
-}
-
 div {
   form {
     .oc-submit-btn {
@@ -42,9 +31,4 @@ div {
       padding: 5px 20px;
     }
   }
-}
-
-.oc-btn-color {
-  background-color: rgb(2, 117, 216);
-  color: white;
 }

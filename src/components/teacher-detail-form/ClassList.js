@@ -25,6 +25,7 @@ function ClassList(props) {
     <li>
       <button
         class="btn btn-outline-primary my-1"
+        value={item}
         onClick={props.handleonChange}
       >
         {item}
