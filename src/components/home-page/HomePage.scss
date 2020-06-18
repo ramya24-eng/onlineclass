@@ -1,0 +1,33 @@
+.oc-homecontent {
+  margin: 100px 100px 50px 100px;
+  //border: 1px solid black;
+  position: relative;
+}
+
+.oc-classblock {
+  display: inline-block;
+  margin: 10px;
+  width: 250px;
+  height: 200px;
+  border: 1px solid lightblue;
+  text-align: center;
+  position: relative;
+  //background-image: url("/assets/img.jpg");
+  background: opacity($color: white);
+  h4 {
+    //background-color: #2a90eb;
+    position: absolute;
+    text-align: center;
+    background-color: lightblue;
+    //filter: blur(5px);
+
+    padding: 60px 83px 60px 85px;
+  }
+  h6 {
+    position: absolute;
+    width: 100%;
+    margin-top: 157px;
+    background-color: #1276f8;
+    padding: 11px;
+  }
+}

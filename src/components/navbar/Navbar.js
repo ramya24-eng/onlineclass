@@ -1,8 +1,11 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
 import TeacherDetailform from "./../teacher-detail-form/TeacherDetailform.js";
-import ScheduleClass from "./../schedule-class/ScheduleClass";
+import ScheduleClass from "./../schedule-class/ScheduleClass.js";
 import "./Navbar.scss";
+import StudentsDetailform from "./../students-detail-form/StudentsDetailform.js";
+import HomePage from "./../home-page/HomePage.js";
+import StaffListdisplay from "./../staff-list-display/StaffListdisplay.js";
 
 function Navbar() {
   return (
@@ -23,6 +26,16 @@ function Navbar() {
                 schedule
               </Link>
             </li>
+            <li className="nav-item mx-2">
+              <Link to="/students" className="nav-link text-white">
+                students
+              </Link>
+            </li>
+            <li className="nav-item mx-2">
+              <Link to="/classroom" className="nav-link text-white">
+                classroom
+              </Link>
+            </li>
           </ul>
         </div>
         <svg
@@ -41,12 +54,21 @@ function Navbar() {
           />
         </svg>
       </nav>
-      <Route path="/" />
+      <Route path="/"></Route>
       <Route exact path="/stafflist">
         <TeacherDetailform />
       </Route>
-      <Route path="/scheduleclass">
+      <Route exact path="/scheduleclass">
         <ScheduleClass />
+      </Route>
+      <Route exact path="/students">
+        <StudentsDetailform />
+      </Route>
+      <Route exact path="/classroom">
+        <HomePage />
+      </Route>
+      <Route exact path="/staff-list-display">
+        <StaffListdisplay />
       </Route>
     </div>
   );

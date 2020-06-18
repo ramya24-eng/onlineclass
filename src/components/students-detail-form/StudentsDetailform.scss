@@ -1,21 +1,21 @@
-.tdf-container {
+.sdf-container {
   width: 600px;
   border: 1px solid lightblue;
   margin-left: 350px;
+  margin-top: 100px;
   padding-bottom: 10px;
-  margin-top: 75px;
 }
 
-.tdf-header {
+.sdf-header {
   text-align: center;
   padding: 10px 0px;
 }
 
-.tdf-div-container {
+.sdf-div-container {
   padding: 0px 10px;
 }
 
-.tdf-border-color {
+.sdf-border-color {
   border: 1px solid white;
 }
 
@@ -32,7 +32,7 @@ ul li button {
 
 div {
   form {
-    .tdf-submit-btn {
+    .sdf-submit-btn {
       margin-left: 45%;
       background-color: rgb(2, 117, 216);
       border-style: none;
@@ -42,7 +42,7 @@ div {
   }
 }
 
-.tdf-btn-color {
+.sdf-btn-color {
   background-color: rgb(2, 117, 216);
   color: white;
 }
