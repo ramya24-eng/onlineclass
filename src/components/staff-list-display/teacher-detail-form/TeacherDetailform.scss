@@ -1,23 +1,23 @@
-.sdf-container {
+/*.oc-container {
   width: 600px;
   border: 1px solid lightblue;
   margin-left: 350px;
-  margin-top: 100px;
   padding-bottom: 10px;
+  margin-top: 75px;
 }
 
-.sdf-header {
+.oc-header {
   text-align: center;
   padding: 10px 0px;
 }
 
-.sdf-div-container {
+.oc-div-container {
   padding: 0px 10px;
 }
 
-.sdf-border-color {
+.oc-border-color {
   border: 1px solid white;
-}
+}*/
 
 ul li {
   display: inline;
@@ -32,7 +32,7 @@ ul li button {
 
 div {
   form {
-    .sdf-submit-btn {
+    .tdf-submit-btn {
       margin-left: 45%;
       background-color: rgb(2, 117, 216);
       border-style: none;
@@ -42,7 +42,7 @@ div {
   }
 }
 
-.sdf-btn-color {
+.tdf-btn-color {
   background-color: rgb(2, 117, 216);
   color: white;
 }

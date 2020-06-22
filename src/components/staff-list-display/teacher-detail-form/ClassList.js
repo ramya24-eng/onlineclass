@@ -1,6 +1,6 @@
 import React from "react";
 import "./TeacherDetailform.scss";
-import firestore from "./../../firebase.js";
+import firestore from "./../../../firebase.js";
 
 function ClassList(props) {
   //const db = firestore.collection("teacherDetail");

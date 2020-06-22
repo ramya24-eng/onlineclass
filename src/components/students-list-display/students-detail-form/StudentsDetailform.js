@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./StudentsDetailform.scss";
-import firestore from "./../../firebase.js";
+import firestore from "./../../../firebase.js";
 
 function StudentsDetailform() {
   //const { items, setitems } = useState([]);
@@ -12,6 +12,7 @@ function StudentsDetailform() {
     let studentName = document.getElementById("student").value;
     let email = document.getElementById("email").value;
     let regno = document.getElementById("regno").value;
+    let classValue = document.getElementById("exampleFormControlSelect1").value;
     let studentErr = document.getElementById("student-err").value;
     db.doc()
       .set({
@@ -34,7 +35,6 @@ function StudentsDetailform() {
 
   return (
     <div className="sdf-container">
-      <h3 className="mx-5 sdf-header">STUDENTS LIST</h3>
       <form onSubmit={handleSubmit}>
         <div class="sdf-div-container form-group">
           <label for="student">Student Name</label>

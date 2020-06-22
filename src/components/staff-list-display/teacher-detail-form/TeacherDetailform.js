@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./TeacherDetailform.scss";
-import firestore from "./../../firebase.js";
+import firestore from "./../../../firebase.js";
 import ClassList from "./ClassList.js";
 import SubjectList from "./SubjectList.js";
 import Select from "react-select";
@@ -78,7 +78,6 @@ function ScheduleClass() {
 
   return (
     <div className="tdf-container">
-      <h3 className="mx-5 tdf-header">TEACHERS LIST</h3>
       <form onSubmit={handleSubmit}>
         <div class="tdf-div-container form-group">
           <label for="teacher">Teachers Name</label>

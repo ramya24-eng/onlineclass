@@ -1,17 +1,17 @@
 import React, { useState, Component } from "react";
 import firestore from "./../../firebase.js";
 import { Link, Route } from "react-router-dom";
-import "./StaffListdisplay.scss";
+import "./StudentsListdisplay.scss";
 import { Button, ButtonToolbar } from "react-bootstrap";
-import { StaffListmodal } from "./StaffListmodal.js";
+import { StudentsListmodal } from "./StudentsListmodal.js";
 
 //let database = firestore.collection("teacherDetail");
-export class StaffListdisplay extends Component {
+export class StudentsListdisplay extends Component {
   //const [staffdetail, setstaffdetail] = useState([]);
   constructor(props) {
     super(props);
     this.state = {
-      staffdetail: [],
+      studentsdetail: [],
       addModalshow: false,
     };
   }
@@ -21,13 +21,13 @@ export class StaffListdisplay extends Component {
   }
 
   refreshList() {
-    const database = firestore.collection("teacherDetail");
+    const database = firestore.collection("StudentsDetail");
     database.get().then((snapshot) => {
       //console.log(snapshot);
       snapshot.docs.forEach((doc) => {
         const data = doc.data();
         this.setState({
-          staffdetail: [...this.state.staffdetail, data],
+          studentsdetail: [...this.state.studentsdetail, data],
         });
         console.log(data);
       });
@@ -39,7 +39,7 @@ export class StaffListdisplay extends Component {
     let addModalClose = () => this.setState({ addModalshow: false });
     return (
       <div className="sld-container">
-        <h3>Teachers list</h3>
+        <h3>Students list</h3>
 
         <table class="table table-hover">
           <thead>
@@ -52,27 +52,27 @@ export class StaffListdisplay extends Component {
                   >
                     +
                   </Button>
-                  <StaffListmodal
+                  <StudentsListmodal
                     show={this.state.addModalshow}
                     onHide={addModalClose}
                     scrollable="true"
                   />
                 </ButtonToolbar>
               </th>
-              <th scope="col">TeacherName</th>
+              <th scope="col">StudentName</th>
+              <th scope="col">Register Number</th>
               <th scope="col">Email</th>
               <th scope="col">Class</th>
-              <th scope="col">Subject</th>
             </tr>
           </thead>
           <tbody>
-            {this.state.staffdetail.map((item, index) => (
+            {this.state.studentsdetail.map((item, index) => (
               <tr>
                 <th>{index + 1}</th>
-                <td>{item.teacherName}</td>
+                <td>{item.studentName}</td>
+                <td>{item.regno}</td>
                 <td>{item.email}</td>
                 <td>{item.class}</td>
-                <td>{item.subject}</td>
               </tr>
             ))}
           </tbody>
@@ -82,4 +82,4 @@ export class StaffListdisplay extends Component {
   }
 }
 
-export default StaffListdisplay;
+export default StudentsListdisplay;

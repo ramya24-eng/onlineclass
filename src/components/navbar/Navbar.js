@@ -1,11 +1,14 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
-import TeacherDetailform from "./../teacher-detail-form/TeacherDetailform.js";
+import TeacherDetailform from "./../staff-list-display/teacher-detail-form/TeacherDetailform.js";
 import ScheduleClass from "./../schedule-class/ScheduleClass.js";
 import "./Navbar.scss";
-import StudentsDetailform from "./../students-detail-form/StudentsDetailform.js";
+import StudentsDetailform from "./../students-list-display/students-detail-form/StudentsDetailform.js";
 import HomePage from "./../home-page/HomePage.js";
 import StaffListdisplay from "./../staff-list-display/StaffListdisplay.js";
+import ClassroomList from "./../classroom-list/ClassroomList.js";
+import ClassroomListdetails from "./../classroom-list/ClassroomListdetails.js";
+import StudentsListdisplay from "./../students-list-display/StudentsListdisplay.js";
 
 function Navbar() {
   return (
@@ -17,7 +20,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item  mx-2" id="oc-font-color">
-              <Link to="/stafflist" className="nav-link text-white">
+              <Link to="/staff-list-display" className="nav-link text-white">
                 staff list
               </Link>
             </li>
@@ -27,7 +30,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item mx-2">
-              <Link to="/students" className="nav-link text-white">
+              <Link to="/students-list-display" className="nav-link text-white">
                 students
               </Link>
             </li>
@@ -55,21 +58,24 @@ function Navbar() {
         </svg>
       </nav>
       <Route path="/"></Route>
-      <Route exact path="/stafflist">
-        <TeacherDetailform />
+      <Route exact path="/staff-list-display">
+        <StaffListdisplay />
       </Route>
       <Route exact path="/scheduleclass">
         <ScheduleClass />
       </Route>
-      <Route exact path="/students">
-        <StudentsDetailform />
+      <Route exact path="/students-list-display">
+        <StudentsListdisplay />
       </Route>
       <Route exact path="/classroom">
         <HomePage />
       </Route>
-      <Route exact path="/staff-list-display">
-        <StaffListdisplay />
+      <Route exact path="/classroom-list">
+        <ClassroomList />
       </Route>
+      {/**  <Route exact path="/details">
+        <ClassroomListdetails />
+      </Route>*/}
     </div>
   );
 }
