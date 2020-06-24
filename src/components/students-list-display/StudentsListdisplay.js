@@ -46,10 +46,7 @@ export class StudentsListdisplay extends Component {
             <tr>
               <th scope="col">
                 <ButtonToolbar>
-                  <Button
-                    variant="primary"
-                    onClick={() => this.setState({ addModalshow: true })}
-                  >
+                  <Button onClick={() => this.setState({ addModalshow: true })}>
                     +
                   </Button>
                   <StudentsListmodal
@@ -59,7 +56,7 @@ export class StudentsListdisplay extends Component {
                   />
                 </ButtonToolbar>
               </th>
-              <th scope="col">StudentName</th>
+              <th scope="col">Name</th>
               <th scope="col">Register Number</th>
               <th scope="col">Email</th>
               <th scope="col">Class</th>

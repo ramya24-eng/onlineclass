@@ -39,44 +39,45 @@ export class StaffListdisplay extends Component {
     let addModalClose = () => this.setState({ addModalshow: false });
     return (
       <div className="sld-container">
-        <h3>Teachers list</h3>
-
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">
-                <ButtonToolbar>
-                  <Button
-                    variant="primary"
-                    onClick={() => this.setState({ addModalshow: true })}
-                  >
-                    +
-                  </Button>
-                  <StaffListmodal
-                    show={this.state.addModalshow}
-                    onHide={addModalClose}
-                    scrollable="true"
-                  />
-                </ButtonToolbar>
-              </th>
-              <th scope="col">TeacherName</th>
-              <th scope="col">Email</th>
-              <th scope="col">Class</th>
-              <th scope="col">Subject</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.staffdetail.map((item, index) => (
+        <h3>Tutor list</h3>
+        <div className="">
+          <table className="table table-hover">
+            <thead>
               <tr>
-                <th>{index + 1}</th>
-                <td>{item.teacherName}</td>
-                <td>{item.email}</td>
-                <td>{item.class}</td>
-                <td>{item.subject}</td>
+                <th scope="col">
+                  <ButtonToolbar>
+                    <Button
+                      variant="primary"
+                      onClick={() => this.setState({ addModalshow: true })}
+                    >
+                      +
+                    </Button>
+                    <StaffListmodal
+                      show={this.state.addModalshow}
+                      onHide={addModalClose}
+                      scrollable="true"
+                    />
+                  </ButtonToolbar>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Class</th>
+                <th scope="col">Subject</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {this.state.staffdetail.map((item, index) => (
+                <tr>
+                  <th>{index + 1}</th>
+                  <td>{item.teacherName}</td>
+                  <td>{item.email}</td>
+                  <td>{item.class}</td>
+                  <td>{item.subject}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }

@@ -1,7 +1,9 @@
 .oc-container {
   width: 600px;
   // height: 560px;
-  border: 1px solid lightblue;
+  // background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 2%;
   margin-left: 350px;
   margin-top: 75px;
   position: fixed;
@@ -29,6 +31,7 @@ div {
       border-style: none;
       border-radius: 5px;
       padding: 5px 20px;
+      margin-bottom: 10px;
     }
   }
 }

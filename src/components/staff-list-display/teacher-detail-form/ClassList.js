@@ -24,7 +24,11 @@ function ClassList(props) {
   let listItems = standard.map((item) => (
     <li>
       <button
-        class="btn btn-outline-primary my-1"
+        class={
+          item == "Class 10" || item == "Class 11" || item == "Class 12"
+            ? "btn cl-btn-color my-1 cl-padding"
+            : "btn cl-btn-color my-1"
+        }
         value={item}
         onClick={props.handleonChange}
       >

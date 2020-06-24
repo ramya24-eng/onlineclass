@@ -72,9 +72,12 @@ class ClassDetails extends Component {
             </Link>
           )))
         }
-
-        <Route exact path="/details">
-          <ClassroomListdetails classes={this.state.classes} />
+        <Route
+          exact
+          path="/details"
+          render={(props) => <ClassroomListdetails {...props} />}
+        >
+          <ClassroomListdetails />
         </Route>
       </div>
     );
@@ -83,9 +86,11 @@ class ClassDetails extends Component {
 
 export default ClassDetails;
 
-/*<p className="cl-container">TeacherName - Subject</p>
+{
+  /*<p className="cl-container">TeacherName - Subject</p>
 {this.state.classes.map((info) => (
   <p className="cl-container">
     {info.teacherName} - {info.subject}
   </p>
 ))}*/
+}

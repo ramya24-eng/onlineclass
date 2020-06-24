@@ -12,31 +12,31 @@ import StudentsListdisplay from "./../students-list-display/StudentsListdisplay.
 
 function Navbar() {
   return (
-    <div>
+    <div className="mx-3">
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <Link to="/" className="navbar-brand mx-5">
-          Online Classroom
+        <Link to="/" className="navbar-brand mx-3">
+          ONLINE CLASSROOM
         </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item  mx-2" id="oc-font-color">
               <Link to="/staff-list-display" className="nav-link text-white">
-                staff list
+                TUTOR
               </Link>
             </li>
             <li className="nav-item mx-2">
               <Link to="/scheduleclass" className="nav-link text-white">
-                schedule
+                SCHEDULE
               </Link>
             </li>
             <li className="nav-item mx-2">
               <Link to="/students-list-display" className="nav-link text-white">
-                students
+                STUDENTS
               </Link>
             </li>
             <li className="nav-item mx-2">
               <Link to="/classroom" className="nav-link text-white">
-                classroom
+                CLASSROOM
               </Link>
             </li>
           </ul>
@@ -73,9 +73,11 @@ function Navbar() {
       <Route exact path="/classroom-list">
         <ClassroomList />
       </Route>
-      {/**  <Route exact path="/details">
-        <ClassroomListdetails />
-      </Route>*/}
+      {/*<Route
+        exact
+        path="/details"
+        render={(props) => <ClassroomListdetails {...props} />}
+      />*/}
     </div>
   );
 }

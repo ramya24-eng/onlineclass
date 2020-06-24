@@ -1,3 +1,5 @@
+@import "./../../../App.scss";
+
 /*.oc-container {
   width: 600px;
   border: 1px solid lightblue;
@@ -34,8 +36,9 @@ div {
   form {
     .tdf-submit-btn {
       margin-left: 45%;
-      background-color: rgb(2, 117, 216);
+      background-color: $primary-color;
       border-style: none;
+      color: white;
       border-radius: 5px;
       padding: 5px 20px;
     }
@@ -43,6 +46,16 @@ div {
 }
 
 .tdf-btn-color {
-  background-color: rgb(2, 117, 216);
+  background-color: $primary-color;
   color: white;
+}
+
+.cl-btn-color {
+  border: 1.2px solid $primary-color;
+  padding: 8px 20px;
+}
+
+.cl-padding {
+  //background-color: black;
+  padding: 8px 16px;
 }

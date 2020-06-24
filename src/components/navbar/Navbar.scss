@@ -1,5 +1,5 @@
-$mycolor: red;
+@import "./../../App.scss";
 
-#oc-font-color {
-  color: $mycolor;
+.nb-primary-color {
+  background-color: $primary-color;
 }

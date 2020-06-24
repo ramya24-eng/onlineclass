@@ -19,15 +19,12 @@ export class StaffListmodal extends Component {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            <h3 className="mx-5 tdf-header">TEACHERS FORM</h3>
+            <h3 className="mx-5 tdf-header">ADD TUTOR</h3>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <TeacherDetailform />
         </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={this.props.onHide}>Close</Button>
-        </Modal.Footer>
       </Modal>
     );
   }

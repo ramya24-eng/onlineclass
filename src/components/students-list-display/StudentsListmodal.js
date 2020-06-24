@@ -19,7 +19,7 @@ export class StudentsListmodal extends Component {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            <h3 className="mx-5 tdf-header">STUDENTS FORM</h3>
+            <h3 className="mx-5 tdf-header">ADD STUDENT</h3>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
