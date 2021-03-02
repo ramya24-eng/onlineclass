@@ -59,7 +59,7 @@ export class StaffListdisplay extends Component {
                   />
                 </ButtonToolbar>
               </th>
-              <th scope="col">TeacherName</th>
+              <th scope="col">StaffName</th>
               <th scope="col">Email</th>
               <th scope="col">Class</th>
               <th scope="col">Subject</th>
